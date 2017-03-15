@@ -1,6 +1,52 @@
-<h1><%= @nasa_info["title"] %></h1>
-<%= image_tag @nasa_info["url"] %>
-<p><%= @nasa_info["explanation"] %></p>
-<p><%= @nasa_info["date"] %></p>
+<div>
+	
+</div>
+
+<div class="collapse bg-inverse" id="navbarHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 py-4">
+        <h4 class="text-white">Collin Davis</h4>
+        <p class="text-muted">I'm a passionate software developer.<br> This is a project I did to practice consuming API's.</p>
+      </div>
+      <div class="col-sm-4 py-4">
+        <h4 class="text-white">Contact</h4>
+        <ul class="list-unstyled">
+          <li><a href="https://github.com/collinthedavis" class="text-white"><i class="fa fa-github-alt fa-lg"></i></a></li>
+          <li><a href="mailto:collinthedavis@gmail.com" class="text-white"><i class="fa fa-envelope-o fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand">APOD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">NASA's Picture of the Day</h1>
+    <p class="lead text-muted">Each day nasa puts out a picture of the day from various satelites and observatories. Here is the picture for <%= @nasa_info["date"] %>, enjoy!</p>
+  </div><hr>
+</section>
+
+<div class="container">
+	<h1 class="text-center"><%= @nasa_info["title"] %></h1>
+	<p class="nas-im"><%= image_tag @nasa_info["url"], class: 'nasa-img' %></p>
+	<p><%= @nasa_info["explanation"] %></p>
+</div>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>
 
 
